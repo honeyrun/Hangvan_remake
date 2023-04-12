@@ -1,0 +1,349 @@
+
+// ABOUT
+.about {
+    background-color: rgba($color: $subColor2, $alpha: 0.3);
+    > section {
+        row-gap: 4vh;
+
+        > article {
+            @include alignColumn(center);
+            row-gap: 2vh;
+            background-color: white;
+            padding: 12% 5%;
+            border-radius: 1vh;
+            box-shadow: 0 4px 25px 0 #e4e1b2;
+        }
+
+        figure {
+            border: 2px solid $mainColor;
+            width: 12vh;
+            height: 12vh;
+            border-radius: 50%;
+            @include alignColumn(center);
+            justify-content: center;
+        }
+
+        figcaption {
+            color: $mainColor;
+            font-size: 38px;
+        }
+    }
+
+    aside {
+        @include rowGap(2vh);
+        align-items: center;
+        text-align: center;
+        line-height: 1.5;
+    }
+
+    h4 {
+        width: 88%;
+        color: $subColor1;
+        font-size: 20px;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: $darkGray;
+        font-size: 15px;
+    }
+}
+
+
+// EVENT
+.event {
+
+    > article {
+        width: $contentRatioMob;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        > a {
+            @include columnGap(0.7vh);
+            align-items: center;
+            color: $mediumGray;
+        }
+
+        i {
+            font-size: 13px;
+        }
+    }
+
+    > section {
+        @include rowGap(5.5vh);
+    }
+
+    aside {
+        padding: 5%;
+        @include rowGap(1.5vh);
+        color: $mediumGray;
+        line-height: 1.3;
+        border: 1px solid $lightgray;
+        border-top: 0px none transparent;
+
+        p {
+            font-size: 17px;
+            color: $mainColor;
+        }
+    }
+
+    h4 {
+        color: $darkGray;
+        font-size: 19px;
+        line-height: 1.4;
+    }
+
+    address, small, label {
+        font-size: 15px;
+    }
+
+    address {
+        font-style: normal;
+    }
+
+    .progress {
+        @include rowGap(0.5vh);
+    }
+
+    progress {
+        width: 100%;
+        accent-color: $mainColor;
+    }
+
+    figure {
+        position: relative;
+        display: flex;
+    }
+
+    figcaption {
+        height: 100%;
+        width: 100%;
+        padding: 5%;
+        box-sizing: border-box;
+        position: absolute;
+        color: white;
+        display: flex;
+        justify-content: right;
+
+        p {
+            width: 25%;
+            height: 18%;
+            font-weight: 500;
+            font-size: 17px;
+            letter-spacing: 1px;
+            border-radius: 2vh;
+            background-color: $subColor1;
+            @include alignColumn(center);
+            justify-content: center;
+        }
+
+    }
+
+    img {
+        width: 100%;
+        height: 25vh;
+        object-fit: cover;
+    }
+}
+
+// PLACE
+.place {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+  > article {
+      width: $contentRatioMob;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      > a {
+          @include columnGap(0.7vh);
+          align-items: center;
+          color: $mediumGray;
+      }
+
+      i {
+          font-size: 13px;
+      }
+  }
+  
+  > section {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: 8vh;
+
+      > article { 
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 40vh;
+          height: 40vh;
+          border-radius: 50%;
+          background-image: url(../img/restaurant.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: 8px solid $mainColor;
+
+          aside {
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              background-color: rgba($color: #444, $alpha: 0.6);
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              align-items: center;
+              row-gap: 2vh;
+
+              
+
+              strong {
+                  font-size: 38px;
+                  text-shadow: 4px 4px $darkGray;
+                  color: $whitegray;
+              }
+
+              p {
+                color: $subColor2;
+                font-size: 14px;
+                font-weight: 700;
+              }
+
+              small {
+                color: $whitegray;
+                text-align: center;
+                width: 80%;
+                line-height: 1.5;
+              }
+
+              a {
+                color: $subColor2;
+                font-weight: 700;
+                text-align: center;
+                border: 2px solid;
+                width: 20%;
+                padding: 1vh;
+              }
+          }
+      }
+
+      article:nth-child(2) {
+        background-image: url(../img/activities.jpg);
+      } 
+      article:nth-child(3) {
+        background-image: url(../img/exhibition.jpg);
+      } 
+      article:nth-child(4) {
+        background-image: url(../img/theatre.jpg);
+      } 
+  }
+}
+
+// contact
+.contact {
+    width:100%;
+    @include alignColumn(center);
+    background-color: $whitegray;
+    > aside {
+        width: $contentRatioMob;
+        h3 {
+            padding-left: 5%;
+            color: $mainColor;
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+    > section {
+        width: $contentRatioMob;
+        @include alignColumn(flex-start);
+        row-gap: 3vh;
+        
+        article {
+            width: 100%;
+            @include alignColumn(flex-start);
+            row-gap: 3vh;
+        }
+    }
+    
+    input, textarea {
+        width: 96%;
+        padding: 1vh 0;
+        padding-left: 4%;
+        border: transparent;
+        border-bottom: 2px solid $mainColor;
+        background-color: transparent;
+    }
+    textarea {
+        border: 2px solid $mainColor;
+        height: 20vh;
+    }
+    
+    input::placeholder,
+    textarea::placeholder {
+        color: $mainColor;
+        font-size: 18px;
+    }
+
+    aside {
+        width: 100%;
+        [type="submit"] {
+            color: $subColor1;
+            text-transform: uppercase;
+            font-size: 18px;
+            font-weight: 700;
+            border: 2px solid;
+            border-radius: 5px;
+            width: 100%;
+        }
+    }
+    > article {
+        width: $contentRatioMob;
+        @include alignColumn(center);
+        row-gap: 4vh;
+        h4 {
+            color: $darkGray;
+            text-transform: capitalize;
+            font-size: 24px;
+        }
+        span {
+            color: $mainColor;
+            text-decoration: underline;
+        }
+        p {
+            line-height: 1.5;
+            text-align: center;
+            color: $mediumGray;
+            font-size: 16px;
+        }
+        aside {
+            @include columnGap (2vh);
+            justify-content: center;
+        }
+        a{
+            color: $subColor1;
+            font-size: 26px;
+        }
+        ul {
+            @include alignColumn(flex-start);
+            row-gap: 2vh;
+        }
+        li{
+            @include columnGap(2vh);
+            list-style-type:none;
+            color: $darkGray;
+            font-size: 18px;
+            i{
+                color: $mainColor;
+            }
+        }
+    }
+  }

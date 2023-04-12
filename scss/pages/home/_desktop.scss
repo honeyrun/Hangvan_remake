@@ -1,0 +1,144 @@
+
+.about {
+    > section {
+        > article {
+            flex-direction: row;
+            column-gap: 5vh;
+        }
+
+        figcaption {
+            font-size: 42px;
+        }
+    }
+
+    aside {
+        width: 80%;
+        text-align: left;
+        row-gap: 1vh;
+        align-items: flex-start;
+    }
+
+    h4 {
+        width: unset;
+        text-align: left;
+    }
+}
+
+.event {
+
+    padding-bottom: 2vh;
+
+    > article {
+        width: $contentRatioDes;
+    }
+
+    > section {
+        > a {
+            width: 23.5%;
+        }
+    }
+
+    aside {
+        min-height: 38vh;
+        row-gap: 2vh;
+    }
+
+    address, small, label {
+        font-size: 14px;
+    }
+
+    img {
+        height: 22vh;
+    }
+
+}
+
+.place {
+
+    > article {
+        width: $contentRatioDes;
+    }
+
+    > section {
+        width: $contentRatioDes;
+        column-gap: 2vh;
+        > article {
+            width: 30vh;
+            height: 30vh;
+
+            aside {
+                row-gap: 1vh;
+                strong {
+                    font-size: 24px;
+                }
+
+                a {
+                    font-size: 12px;
+                    transition: .2s;
+                }
+
+                a:hover {
+                    background-color: $mainColor;
+                    color: $whitegray;
+                    border: 2px solid transparent;
+                }
+            }
+            
+        }
+
+    }
+}
+
+// contact
+.contact {
+    @include flexRow(4%);
+    align-items: flex-start;
+    justify-content: center;
+    
+    > aside {
+        width: $contentRatioDes;
+    }
+
+    > section {
+        width: 37%;
+
+        input:nth-child(1),
+        input:nth-child(2) {
+            width: 100%;
+        }
+
+        textarea {
+            width: 96%;
+        }
+
+        aside {
+            width: 100%;
+        }
+        
+        [type="submit"] {
+            padding: 1vh 0;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        [type="submit"]:hover {
+            background-color: $subColor1;
+            color: $whitegray;
+        }
+
+    }
+
+    > article {
+        width: 37%;
+        padding-top: 0;
+        row-gap: 6vh;
+
+        a{
+            transition: .3s;
+        }
+
+        a:hover {
+            color: $mainColor;
+        }
+    }
+}
